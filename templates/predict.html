@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Next 30-Day Stock Price Predictions</h1>
+        <div class="plot">
+            <img src="{{ url_for('static', filename='future_plot.png') }}" alt="Prediction Plot" width="100%">
+        </div>
+        <div class="prediction">
+            <p>Final Predicted Price: <strong>{{ final_price }}</strong></p>
+        </div>
+        <form action="/">
+            <button type="submit">Back to Home</button>
+        </form>
+    </div>
+</body>
+</html>
